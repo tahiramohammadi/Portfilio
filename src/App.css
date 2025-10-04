@@ -1,0 +1,32 @@
+
+@import "tailwindcss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+}
+.clip-right-circle {
+  clip-path: ellipse(100% 100% at 100% 50%);
+}
+.Experience-title h2{
+  position: relative;
+}
+.Experience-title h2::after{
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Adjust the distance from the title */
+  left: 0;
+  width: 0%;
+  height: 3px; /* Height of the line */
+  background-color: #ffc107; /* Yellow background */
+  opacity: 0.3;
+  transition: width 0.35s ease, opacity 0.35s ease;
+  z-index: -1;
+}
+.Experience-title h2:hover::after{
+  width: 100%;
+  opacity: 1;
+}
+
