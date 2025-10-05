@@ -43,7 +43,7 @@ const Contacts = () => {
         message: contact.message,
         "g-recaptcha-response": captchaToken, // if backend expects this
       });
-
+    
       // Reset form
       setContact({ name: "", email: "", subject: "", message: "" });
       setCaptchaToken(null);
