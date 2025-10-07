@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import react from "react";
-import Education from './Education'
+ import Education from './Education'
 import ExperainceDetail from './ExperainceDetail'
 
 const Experainces = () => {
@@ -41,8 +41,8 @@ const Experainces = () => {
         </div>
     <div className="flex-shrink-0 ">
 
-              <Education/> 
-            
+      
+    <Education/>       
   
     </div>
     

@@ -5,13 +5,14 @@ import './App.css'
 import Project from './Components/Project'
 import Navbar from './Components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './Components/Home'
-import About from './Components/About'
-import Skills from './Components/Skills'
-import Experainces from './Components/Experainces'
-import HireMe from './Components/HireMe';
+ import Home from './Components/Home'
+  import About from './Components/About'
+ import Skills from './Components/Skills'
+ import Experainces from './Components/Experainces'
+ import HireMe from './Components/HireMe';
 import Contacts from './Components/Contacts'
 import Footer  from './Components/Footer';
+
 
 function App() {
 
@@ -49,7 +50,7 @@ function App() {
 
     return (
         <div>
-               <div className="relative min-h-screen ">
+               <div className="relative min-h-screen  ">
       {/* Loading Spinner */}
       {isLoading && (
         <div className="absolute inset-0 flex justify-center items-center bg-[#F8B400] bg-opacity-50 z-50">
@@ -58,16 +59,17 @@ function App() {
       )}
 
       {/* Main Content */}
-      <div className={isLoading ? 'hidden' : 'block'}>
+      <div className={isLoading ? 'hidden' : 'block' }>
       <Navbar/>
-       <Home/>
-       <About/>
-       <Skills/>
+  
+        <Home/>
+        <About/>
+        <Skills/>
        <Experainces/>
-       <HireMe/>
-       <Project/>
-       <Contacts/>
-       <Footer />   
+        <HireMe/>
+        <Project/>
+     <Contacts/>
+       <Footer />        
       </div>
     </div>
    

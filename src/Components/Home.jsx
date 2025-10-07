@@ -61,8 +61,9 @@ const Home =()=>{
       <span>{text}</span>
       <span className="animate-blink">|</span>
              </div>
-             <Social_link/>
+            
 
+             <Social_link/>  
           </div> 
         
     </section>
@@ -73,3 +74,4 @@ const Home =()=>{
 export default Home;
 
 
+ <Social_link/>  

@@ -49,7 +49,7 @@ const Project = () => {
           {projects.map((project) => (
             <div key={project.id} className="relative cursor-pointer bg-white group shadow-lg transition-transform duration-300 hover:scale-95 hover:border-6  hover:border-[#F8B400]">
                 <img 
-                        src={`http://127.0.0.1:8000/storage/images/${project.image}`} 
+                        src={`http://localhost:8000/storage/images/${project.image}`} 
 
                         className=" w-full object-contain"
                                            />  

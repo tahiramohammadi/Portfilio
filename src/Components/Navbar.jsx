@@ -60,10 +60,16 @@ const Navbar = () => {
             <li  className=" hover:bg-[#F8B400]   py-2 px-6   hover:rounded-full  hover:text-white">
             <button onClick={() => scrollToSection("contacts")}>Contact</button>
             </li>
-            <li  className="hover:bg-[#F8B400]   py-2 px-6   hover:rounded-full hover:text-white">
+            {/* <li  className="hover:bg-[#F8B400]   py-2 px-6   hover:rounded-full hover:text-white">
             <button onClick={() => scrollToSection("English")}>English</button>
-            </li>
+         
+            </li> */}
+          
+    
+     
+          
           </ul>
+     
 
           {/* Mobile Menu Button */}
           <button
@@ -84,8 +90,9 @@ const Navbar = () => {
               />
             </svg>
           </button>
+  
         </div>
-
+     
         {/* Mobile Menu (dropdown) */}
         {isOpen && (
           <ul className="fixed top-20 left-4 right-4  text-lg  font-bold font-source-sans   bg-white md:hidden   px-4 pb-4 pt-4  shadow-md flex flex-col space-y-4">
