@@ -2,7 +2,7 @@ import react from "react"
 
 import Baha from '../assets/Baha.jpg'
 import { useState, useEffect } from "react";
-import Social_link from './social_link'
+import Social_link from './Social_link'
 
 const Home =()=>{
   const roles = ["Full Stack Developer", "IT Support"];
@@ -62,8 +62,8 @@ const Home =()=>{
       <span className="animate-blink">|</span>
              </div>
             
+<Social_link/>
 
-             <Social_link/>  
           </div> 
         
     </section>
