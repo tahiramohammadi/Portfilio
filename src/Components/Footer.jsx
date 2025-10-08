@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCoffee, FaHeart } from "react-icons/fa";
-import Social_link from "./social_link";
+import Social_link from "./Social_link";
 
 const Footer = () => {
   return (
