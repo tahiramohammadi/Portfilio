@@ -23,13 +23,14 @@ const Chatbox = () => {
         console.log('Pusher Key:', import.meta.env.VITE_PUSHER_APP_KEY);
         console.log('Pusher Cluster:', import.meta.env.VITE_PUSHER_APP_CLUSTER);
         // Listen for events on the chat-channel
-        window.Echo.channel('chat-channel')
+        window.Echo.channel('chat')
             .listen('MessageSent', (e) => {
+              console.log('Received:', e.message);
                 setMessages(prevMessages => [...prevMessages, e.message]);
             });
 
         // Fetch initial messages from Laravel API
-        axios.get('/api/messages').then(response => {
+        axios.get('http://127.0.0.1:8000/api/messages').then(response => {
             setMessages(response.data);
         });
 
@@ -42,7 +43,7 @@ const Chatbox = () => {
         e.preventDefault();
         if (newMessage.trim() === '') return;
 
-        axios.post('/api/messages', { message: newMessage })
+        axios.post('http://127.0.0.1:8000/api/messages', { message: newMessage })
             .then(response => {
                 setNewMessage('');
             });
@@ -64,7 +65,7 @@ const Chatbox = () => {
           {isOpen && (
             <div className="fixed bottom-6 right-6 w-80 h-96 bg-white rounded-lg shadow-xl flex flex-col z-50">
               {/* Header */}
-              <div className="flex justify-between items-center p-4 bg-gray-100 border-b rounded-t-lg">
+              <div className="flex justify-between items-center p-4 bg-[#F8B400] border-b rounded-t-lg">
                 <h3 className="text-lg font-semibold">Chat</h3>
                 <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-gray-700">
                   <AiOutlineClose size={20} />
