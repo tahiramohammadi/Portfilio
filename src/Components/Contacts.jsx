@@ -3,7 +3,6 @@ import { useState } from "react";
 import { FaMapMarked, FaComment, FaPhoneVolume } from "react-icons/fa";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
-
 const ReCAPTCHA_Site_KEY = "6Le2fNgrAAAAAPh9WJXneykMPfuQWQ_e7l-sjFPs";
 
 const Contacts = () => {
@@ -32,6 +31,8 @@ const Contacts = () => {
       alert("Please verify the reCAPTCHA!");
       return;
     }
+//     recaptchaRef.current.reset();
+// setCaptchaToken(null);
 
     try {
       await axios.post("http://127.0.0.1:8000/api/contacts", {
@@ -39,7 +40,8 @@ const Contacts = () => {
         email: contact.email,
         subject: contact.subject,
         message: contact.message,
-        "g-recaptcha-response": captchaToken,
+        captcha_token: captchaToken, 
+        
       });
 
       setContact({ name: "", email: "", subject: "", message: "" });
@@ -134,7 +136,10 @@ const Contacts = () => {
 
             {/* Captcha */}
             <div className="flex justify-center">
-              <ReCAPTCHA sitekey={ReCAPTCHA_Site_KEY} onChange={handleCaptchaChange} />
+            <ReCAPTCHA
+            sitekey={ReCAPTCHA_Site_KEY}
+           onChange={(token) => setCaptchaToken(token)}
+            />
             </div>
 
             {/* Submit */}

@@ -17,7 +17,7 @@ const HireMe= () => {
        
         
     <section  className=" container mt-20 mx-auto h-45  bg-[#F8B400] lg:px-35 md:px-35">
-      <div classname=" px-4 grid  grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 ">
+      <div className=" px-4 grid  grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 ">
       <div className=" flex  flex-col lg:flex-row items-center py-10 ">
          <div className="flex-1">
         <h1 className="text-white font-bold text-xl lg:text-3xl py-4 ">I am Available For Remote Jobs !</h1>

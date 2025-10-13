@@ -13,6 +13,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contacts from './Components/Contacts'
 import Footer  from './Components/Footer';
 
+import Chatbox from './Chatbox';
+
 
 function App() {
 
@@ -69,7 +71,8 @@ function App() {
         <HireMe/>
         <Project/>
      <Contacts/>
-       <Footer />        
+       <Footer />   
+       <Chatbox />     
       </div>
     </div>
    

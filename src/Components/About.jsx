@@ -66,6 +66,8 @@ const About = () => {
         ) : (
             <p>No image available</p>
         )}
+
+        
     </div>
     
     
